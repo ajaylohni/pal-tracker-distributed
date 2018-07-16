@@ -9,3 +9,4 @@ applications:
 #    REGISTRATION_SERVER_ENDPOINT: https://registration-pal-aj.apps.evans.pal.pivotal.io
   services:
   - tracker-allocations-database
+  - tracker-service-registry
