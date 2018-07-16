@@ -18,4 +18,16 @@ dependencies {
     testCompile project(":components:test-support")
     compile "org.springframework.boot:spring-boot-starter-actuator"
     compile "io.pivotal.spring.cloud:spring-cloud-services-starter-service-registry"
+    compile "io.pivotal.spring.cloud:spring-cloud-sso-connector:$springCloudSsoVersion"
+
 }
+
+
+bootRun.environment([
+        "APPLICATION_OAUTH_ENABLED": true,
+        "SECURITY_OAUTH2_CLIENT_CLIENT_ID": "tracker-client",
+        "SECURITY_OAUTH2_CLIENT_CLIENT_SECRET": "supersecret",
+        "SECURITY_USER_NAME": "actuator",
+        "SECURITY_USER_PASSWORD": "operations4red"
+])
+
