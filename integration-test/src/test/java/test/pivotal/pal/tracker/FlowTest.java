@@ -48,10 +48,10 @@ public class FlowTest {
                 return JsonPath.parse(response.body).read("$[0].id", Long.class);
             } catch (PathNotFoundException e1) {
                 fail("Could not find id in response body. Response was: \n" + response);
-                return -1;
+
+            }        return -1;
             }
         }
-    }
 
 
     @Before
