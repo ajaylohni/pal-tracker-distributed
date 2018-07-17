@@ -41,6 +41,7 @@ public class ApplicationServer {
             .put("EUREKA_CLIENT_ENABLED", "false")
             .put("RIBBON_EUREKA_ENABLED", "false")
             .put("APPLICATION_OAUTH_ENABLED", "false")
+            .put("REGISTRATION_SERVER_ENDPOINT", "http://registration-server")
             .build()
         );
     }
